@@ -6,7 +6,7 @@ def analyse():
 
 topAreaHeight, bottomAreaHeight= (20,20)
 #valor de diferenca na deteccao de diferenca
-thresholdValue= 50
+thresholdValue= 90
 #valores maximos de area e perimetro
 maxArea= 300
 maxPerimeter= 150
@@ -74,8 +74,7 @@ while True:
     topHasObject= (topAreaCount>maxArea and topPerimeterCount<maxPerimeter)
     bottomHasObject= (bottomAreaCount>maxArea and bottomPerimeterCount<maxPerimeter)
     
-    if topHasObject:
-        
+    if topHasObject: 
         if not topHadObject:
             beltObjectCount += 1
             topHadObject= True
@@ -92,7 +91,7 @@ while True:
             
     isRecording= (beltObjectCount>0)
     if isRecording:
-        analyse()
+        analyse() 
     print("\nOBJECT COUNT:",beltObjectCount)
     
     #apertar q para sair
